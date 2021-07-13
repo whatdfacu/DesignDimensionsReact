@@ -1,0 +1,11 @@
+.Header{
+    background: #707070;
+    background: linear-gradient(180deg, #a3a3a3 0%, #707070 50%, #a3a3a3 100%);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Imagen{
+    width: 200px;
+}

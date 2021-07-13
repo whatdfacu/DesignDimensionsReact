@@ -1,0 +1,16 @@
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: linear-gradient(180deg, #a3a3a3 0%, #707070 50%, #a3a3a3 100%);
+    padding: 1rem;
+}
+.Link{
+    list-style: none;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #c3c7d1;
+} 
+.cart{
+    height: 5px;
+}

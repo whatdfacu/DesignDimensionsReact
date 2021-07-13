@@ -1,0 +1,20 @@
+.contador {
+  background-color: red;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 50%;
+  padding: 4px 17px;
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.contador input {
+  padding: 0rem;
+  border: none;
+  background: transparent;
+  width: 50px;
+  height: 70px;
+}
+/*# sourceMappingURL=contador.css.map */
