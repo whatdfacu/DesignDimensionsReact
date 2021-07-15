@@ -1,17 +1,17 @@
 import React, { useContext, useState } from 'react'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../Clases/contador.css'
-import {CartContext} from './CartContext'
+import { CartContext } from './CartContext'
 
 
-const Contador = ({item, id, aumentarContador, restarContador, cantidad}) => {
-           
-    const [ open, setOpen ] = useState(false)
+const Contador = ({ item, id, aumentarContador, restarContador, cantidad }) => {
 
-    const {addToCart} = useContext (CartContext)
+    const [open, setOpen] = useState(false)
 
-    function addAndOpen (item, cantidad, id){
-        addToCart (item, cantidad, id);
+    const { addToCart } = useContext(CartContext)
+
+    function addAndOpen(item, cantidad, id) {
+        addToCart(item, cantidad, id);
         setOpen(true)
     }
 
@@ -19,19 +19,35 @@ const Contador = ({item, id, aumentarContador, restarContador, cantidad}) => {
         <div>
             <div>
                 <button onClick={restarContador}>-</button>
-                    <h3>{cantidad}</h3>
+                <h3>{cantidad}</h3>
                 <button onClick={aumentarContador}>+</button>
             </div>
-            { !open ? (<div>
-                <button   onClick={ () => addAndOpen(item, cantidad, id)}>
-                <h3>Agregar al carrito </h3>
+            {!open ? (<div>
+                <button onClick={() => addAndOpen(item, cantidad, id)}>
+                    <h3>Agregar al carrito </h3>
                 </button>
-            </div>) : 
-            (<NavLink to="/Cart">
-                <button>
-                    <h3>Terminar la compra</h3>
-                </button>
-            </NavLink>) }
+            </div>) :
+                (
+
+                    <>
+                        <NavLink to="/Cart">
+
+                            <button className="BotonTienda" >
+                                <h3>Terminar la compra</h3>
+                            </button>
+                        </NavLink>
+                        <NavLink to="/">
+                            <button className="BotonTienda" >
+                                <h3>Seguir Comprando</h3>
+                            </button>
+                        </NavLink>
+                    </>
+                )
+
+
+
+            }
+
         </div>
     )
 }
